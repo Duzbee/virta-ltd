@@ -1,7 +1,7 @@
 import { useQuery, gql } from "@apollo/client";
 import { CheckmarkFilled, Misuse } from "@carbon/icons-react";
 
-type Country = {
+export type Country = {
   code: string;
   name: string;
   iso3: string;
@@ -10,7 +10,7 @@ type Country = {
   defaultTimezone: string;
 };
 
-const COUNTRY_RESOLVER_QUERY = gql`
+export const COUNTRY_RESOLVER_QUERY = gql`
   {
     countryResolver {
       code
